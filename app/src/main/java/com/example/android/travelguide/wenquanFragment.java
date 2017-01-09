@@ -6,17 +6,18 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageView;
-import android.widget.TextView;
+import android.widget.ListView;
+
+import java.util.ArrayList;
 
 
 /**
  * A simple {@link Fragment} subclass.
  */
-public class wenquanFragment extends Fragment {
+public class WenquanFragment extends Fragment {
 
 
-    public wenquanFragment() {
+    public WenquanFragment() {
         // Required empty public constructor
     }
 
@@ -27,15 +28,19 @@ public class wenquanFragment extends Fragment {
         // Inflate the layout for this fragment
         View rootView = inflater.inflate(R.layout.fragment_wenquan, container, false);
 
-        Guide guide = new Guide(R.string.wenquan, R.drawable.wenquan);
+        ArrayList<Guide> guides = new ArrayList<Guide>();
 
-        ImageView img = (ImageView) rootView.findViewById(R.id.wenquan_img);
+        guides.add(new Guide(R.string.no_string, R.drawable.wenquan));
+        guides.add(new Guide(R.string.wenquan_position, 0));
+        guides.add(new Guide(R.string.wenquan_area, 0));
+        guides.add(new Guide(R.string.wenquan_intro, 0));
+        guides.add(new Guide(R.string.wenquan_history, 0));
 
-        img.setImageResource(guide.getImg_id());
+        GuideArrayAdapter adapter = new GuideArrayAdapter(getContext(), guides);
 
-        TextView text = (TextView) rootView.findViewById(R.id.wenquan_string);
+        ListView listview = (ListView) rootView.findViewById(R.id.list_wenquan);
 
-        text.setText(guide.getString_id());
+        listview.setAdapter(adapter);
 
         return rootView;
     }

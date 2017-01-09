@@ -9,11 +9,11 @@ import android.support.v4.app.FragmentPagerAdapter;
  * Created by tom on 2017/1/6.
  */
 
-public class customFragmentPagerAdapter extends FragmentPagerAdapter {
+public class CustomFragmentPagerAdapter extends FragmentPagerAdapter {
 
     private Context context;
 
-    public customFragmentPagerAdapter(FragmentManager fm, Context context) {
+    public CustomFragmentPagerAdapter(FragmentManager fm, Context context) {
         super(fm);
         this.context = context;
     }
@@ -21,13 +21,13 @@ public class customFragmentPagerAdapter extends FragmentPagerAdapter {
     @Override
     public Fragment getItem(int position) {
         if (position == 0) {
-            return new xihuFragment();
+            return new XihuFragment();
         } else if (position == 1) {
-            return new dayawanFragment();
+            return new DayawanFragment();
         } else if (position == 2) {
-            return new luofuFragment();
+            return new LuofuFragment();
         } else {
-            return new wenquanFragment();
+            return new WenquanFragment();
         }
     }
 

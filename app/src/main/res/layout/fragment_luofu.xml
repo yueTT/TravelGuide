@@ -2,31 +2,15 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.android.travelguide.luofuFragment">
+    tools:context="com.example.android.travelguide.LuofuFragment">
 
     <!-- TODO: Update blank fragment layout -->
-    <ScrollView
+    <ListView
+        android:id="@+id/list_luofu"
+        android:dividerHeight="8dp"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="wrap_content">
 
-        <LinearLayout
-            android:orientation="vertical"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
-            <ImageView
-                android:id="@+id/luofu_img"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:scaleType="centerCrop"/>
-
-            <TextView
-                android:id="@+id/luofu_string"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
-
-        </LinearLayout>
-
-    </ScrollView>
+    </ListView>
 
 </FrameLayout>

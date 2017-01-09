@@ -2,32 +2,15 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.android.travelguide.xihuFragment">
+    tools:context="com.example.android.travelguide.XihuFragment">
 
     <!-- TODO: Update blank fragment layout -->
-
-    <ScrollView
+    <ListView
+        android:id="@+id/list_xihu"
+        android:dividerHeight="8dp"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="wrap_content">
 
-        <LinearLayout
-            android:orientation="vertical"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
-            <ImageView
-                android:id="@+id/xihu_img"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:scaleType="centerCrop"/>
-
-            <TextView
-                android:id="@+id/xihu_string"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
-
-        </LinearLayout>
-
-    </ScrollView>
+    </ListView>
 
 </FrameLayout>
